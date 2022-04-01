@@ -26,8 +26,6 @@ recipeApp.getCusine = () => {
       .then((jsonRes) => {
         console.log(jsonRes);
         recipeApp.displayData(jsonRes);
-
-        // recipeApp.displayCusine(jsonResponse)
       });
   });
 };
