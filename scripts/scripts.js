@@ -4,6 +4,7 @@ recipeApp.apiKey = "9f0deac75fc6469b92e2902b6660fd37";
 recipeApp.url = "https://api.spoonacular.com/food/search";
 
 recipeApp.getCusine = () => {
+
     const formElement = document.querySelector("form");
     formElement.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -19,20 +20,21 @@ recipeApp.getCusine = () => {
             // cuisine: "italian"
         });
 
-        fetch(url)
-            .then((res) => {
-                return res.json();
-            })
-            .then((jsonRes) => {
-                console.log(jsonRes);
-                recipeApp.displayData(jsonRes);
-            });
-    });
+    fetch(url)
+      .then((res) => {
+        return res.json();
+      })
+      .then((jsonRes) => {
+        console.log(jsonRes);
+        recipeApp.displayData(jsonRes);
+      });
+  });
 };
 
 recipeApp.displayData = (jsonResData) => {
-    jsonResData.searchResults[0].results.forEach((mancare) => {
-        const newListItem = document.createElement("li");
+  jsonResData.searchResults[0].results.forEach((mancare) => {
+    const newListItem = document.createElement("li");
+
 
         newListItem.innerHTML = `
           <div class="recipeContainer">
@@ -46,12 +48,12 @@ recipeApp.displayData = (jsonResData) => {
           </div>
             `;
 
-        document.querySelector(".recipesList").appendChild(newListItem);
-    });
+    document.querySelector(".recipesList").appendChild(newListItem);
+  });
 };
 
 recipeApp.innit = () => {
-    recipeApp.getCusine();
+  recipeApp.getCusine();
 };
 
 recipeApp.innit();
