@@ -1,0 +1,21 @@
+form {
+    text-align: center;
+
+    label {
+        display: block;
+    }
+}
+
+.recipeContainer {
+    display: flex;
+
+    .imgContainer {
+        width: 40%;
+        // vertical-align: middle;
+    }
+
+    .textContainer {
+        width: 50%;
+        margin-left: 15px;
+    }
+}
