@@ -9,7 +9,7 @@ recipeApp.getCusine = () => {
         event.preventDefault();
 
         const userSelection = document.querySelector("select").value;
-        userSelection = "";
+        // userSelection = "";
 
         const url = new URL(recipeApp.url);
         url.search = new URLSearchParams({
