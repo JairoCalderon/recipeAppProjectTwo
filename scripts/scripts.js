@@ -35,9 +35,15 @@ recipeApp.displayData = (jsonResData) => {
         const newListItem = document.createElement("li");
 
         newListItem.innerHTML = `
-            <h3>${mancare.name}</h3>
-            <img src=${mancare.image} alt=${mancare.name}>
-            <p>${mancare.content}</p>
+          <div class="recipeContainer">
+            <div class="imgContainer">
+              <img src=${mancare.image} alt=${mancare.name}>
+            </div>
+            <div class="textContainer">
+              <h3>${mancare.name}</h3>
+              <p>${mancare.content}</p>
+            </div>
+          </div>
             `;
 
         document.querySelector(".recipesList").appendChild(newListItem);
