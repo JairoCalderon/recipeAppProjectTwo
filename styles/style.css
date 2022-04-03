@@ -319,7 +319,7 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 p {
@@ -344,6 +344,9 @@ form label {
 }
 .recipeContainer .imgContainer {
   width: 40%;
+}
+.recipeContainer .imgContainer img {
+  vertical-align: middle;
 }
 .recipeContainer .textContainer {
   width: 50%;
