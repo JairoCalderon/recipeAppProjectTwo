@@ -1,21 +1,24 @@
 form {
-    text-align: center;
+  text-align: center;
 
-    label {
-        display: block;
-    }
+  label {
+    display: block;
+  }
 }
 
 .recipeContainer {
-    display: flex;
+  display: flex;
 
-    .imgContainer {
-        width: 40%;
-        // vertical-align: middle;
-    }
+  .imgContainer {
+    width: 40%;
 
-    .textContainer {
-        width: 50%;
-        margin-left: 15px;
+    img {
+      vertical-align: middle;
     }
+  }
+
+  .textContainer {
+    width: 50%;
+    margin-left: 15px;
+  }
 }
