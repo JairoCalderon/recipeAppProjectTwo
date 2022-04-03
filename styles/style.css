@@ -302,13 +302,16 @@ a {
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  background-color: #dda15e;
 }
 
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 5rem;
-  text-align: center;
+  text-align: left;
   line-height: 150px;
+  color: #283618;
+  margin: 0;
 }
 
 h2 {
@@ -319,7 +322,7 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -328,27 +331,97 @@ p {
 
 footer {
   text-align: center;
+  background-color: aliceblue;
 }
 
-form {
+header {
+  height: 50vh;
+  background: url(../assets/AdobeStock_199274981.jpeg) center/cover no-repeat;
+}
+
+.headTitleContainer {
+  width: 65%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  height: 50vh;
+  position: relative;
+}
+
+.userInteraction {
+  padding: 50px 0;
+}
+.userInteraction form {
   text-align: center;
 }
-form label {
+.userInteraction form label {
   display: block;
+  margin: 20px;
+  text-transform: uppercase;
+  color: #283618;
+  font-weight: bold;
+}
+.userInteraction form select,
+.userInteraction form button {
+  padding: 10px;
+  background-color: #fefae0;
+  color: #283618;
+  border: none;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.userInteraction form button {
+  text-transform: uppercase;
+  background-color: #283618;
+  color: #fefae0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.userInteraction form button:hover, .userInteraction form button:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .recipeContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  margin: 50px auto;
+  padding: 30px;
+  -webkit-box-shadow: 18px 16px 16px -11px rgba(0, 0, 0, 0.8);
+          box-shadow: 18px 16px 16px -11px rgba(0, 0, 0, 0.8);
 }
 .recipeContainer .imgContainer {
   width: 40%;
+  height: auto;
 }
 .recipeContainer .imgContainer img {
-  vertical-align: middle;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
 }
 .recipeContainer .textContainer {
   width: 50%;
   margin-left: 15px;
+  padding: 10px 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

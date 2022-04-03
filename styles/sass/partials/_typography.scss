@@ -1,13 +1,16 @@
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
+  background-color: #dda15e;
 }
 
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 5rem;
-  text-align: center;
+  text-align: left;
   line-height: 150px;
+  color: #283618;
+  margin: 0;
 }
 
 h2 {
@@ -18,7 +21,7 @@ h2 {
 
 h3 {
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 p {
@@ -27,4 +30,5 @@ p {
 
 footer {
   text-align: center;
+  background-color: aliceblue;
 }

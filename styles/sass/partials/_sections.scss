@@ -1,24 +1,89 @@
-form {
-  text-align: center;
+header {
+  height: 50vh;
+  background: url(../assets/AdobeStock_199274981.jpeg) center/ cover no-repeat;
+}
 
-  label {
-    display: block;
+.headTitleContainer {
+  width: 65%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  height: 50vh;
+  position: relative;
+}
+
+.userInteraction {
+  padding: 50px 0;
+
+  form {
+    text-align: center;
+
+    label {
+      display: block;
+      margin: 20px;
+      text-transform: uppercase;
+      color: #283618;
+      font-weight: bold;
+    }
+
+    select,
+    button {
+      padding: 10px;
+      background-color: #fefae0;
+      color: #283618;
+      border: none;
+      margin: 0 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      text-transform: uppercase;
+      background-color: #283618;
+      color: #fefae0;
+      transition: 0.4s;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      }
+    }
   }
 }
 
+//Coming from the API
 .recipeContainer {
   display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 40px;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 18px 16px 16px -11px rgba(0, 0, 0, 0.8);
 
   .imgContainer {
     width: 40%;
+    height: auto;
 
     img {
-      vertical-align: middle;
+      object-fit: contain;
+      border-radius: 50%;
     }
   }
 
   .textContainer {
     width: 50%;
     margin-left: 15px;
+    padding: 10px 0;
   }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
