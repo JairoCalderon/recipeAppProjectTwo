@@ -9,14 +9,12 @@ recipeApp.getCusine = () => {
     event.preventDefault();
 
     const userSelection = document.querySelector("select").value;
-    // userSelection = "";
 
     const url = new URL(recipeApp.url);
     url.search = new URLSearchParams({
       apiKey: recipeApp.apiKey,
       number: 40,
       query: userSelection,
-      // cuisine: "italian"
     });
 
     fetch(url)
@@ -37,7 +35,7 @@ recipeApp.displayData = (jsonResData) => {
   jsonResData.searchResults[0].results.forEach((mancare) => {
     const newListItem = document.createElement("li");
 
-    const shortParagraph = `${mancare.content}`.substring(0, 200);
+    const shortParagraph = `${mancare.content}`.substring(0, 209);
 
     newListItem.innerHTML = `
           <div class="recipeContainer">
