@@ -3,29 +3,24 @@ const recipeApp = {};
 recipeApp.apiKey = "9f0deac75fc6469b92e2902b6660fd37";
 recipeApp.url = "https://api.spoonacular.com/food/search";
 
-recipeApp.getCusine = () => {
-  const formElement = document.querySelector("form");
-  formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    const userSelection = document.querySelector("select").value;
+recipeApp.getCusine = (stuff) => {
 
-    const url = new URL(recipeApp.url);
-    url.search = new URLSearchParams({
-      apiKey: recipeApp.apiKey,
-      number: 40,
-      query: userSelection,
-    });
-
-    fetch(url)
-      .then((res) => {
-        return res.json();
-      })
-      .then((jsonRes) => {
-        console.log(jsonRes);
-        recipeApp.displayData(jsonRes);
-      });
+  const url = new URL(recipeApp.url);
+  url.search = new URLSearchParams({
+    apiKey: recipeApp.apiKey,
+    number: 40,
+    query: stuff,
   });
+
+  fetch(url)
+    .then((res) => {
+      return res.json();
+    })
+    .then((jsonRes) => {
+      console.log(jsonRes);
+      recipeApp.displayData(jsonRes);
+    });
 };
 
 recipeApp.displayData = (jsonResData) => {
@@ -55,8 +50,28 @@ recipeApp.displayData = (jsonResData) => {
   });
 };
 
+recipeApp.optionSelected = () => {
+  const formElement = document.querySelector("form");
+  formElement.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const userSelection = document.querySelector("select").value;
+    const warning = document.querySelector("label")
+
+    if (userSelection === "null") {
+      warning.textContent = `You did not select your favourite cousine, please make a selection`
+      warning.style.color = `rgb(113, 7, 7)`;
+
+    } else {
+      recipeApp.getCusine(userSelection);
+      warning.textContent = `Well done`;
+      warning.style.color = `#283618`;
+    }
+  })
+}
+
 recipeApp.innit = () => {
-  recipeApp.getCusine();
+  recipeApp.optionSelected()
 };
 
 recipeApp.innit();
