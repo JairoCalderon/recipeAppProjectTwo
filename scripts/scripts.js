@@ -3,9 +3,7 @@ const recipeApp = {};
 recipeApp.apiKey = "9f0deac75fc6469b92e2902b6660fd37";
 recipeApp.url = "https://api.spoonacular.com/food/search";
 
-
 recipeApp.getCusine = (stuff) => {
-
   const url = new URL(recipeApp.url);
   url.search = new URLSearchParams({
     apiKey: recipeApp.apiKey,
@@ -38,7 +36,7 @@ recipeApp.displayData = (jsonResData) => {
               <img src=${mancare.image} alt=${mancare.name}>
             </div>
             <div class="textContainer">
-              <h3>${mancare.name}</h3>
+              <h2>${mancare.name}</h2>
               <p>${shortParagraph}... 
                   <a href="${mancare.link}" target="blank" rel="noopener">Read more</a>
               </p>
@@ -56,22 +54,21 @@ recipeApp.optionSelected = () => {
     event.preventDefault();
 
     const userSelection = document.querySelector("select").value;
-    const warning = document.querySelector("label")
+    const warning = document.querySelector("label");
 
     if (userSelection === "null") {
-      warning.textContent = `You did not select your favourite cousine, please make a selection`
+      warning.textContent = `You did not select your favourite cousine, please make a selection`;
       warning.style.color = `rgb(113, 7, 7)`;
-
     } else {
       recipeApp.getCusine(userSelection);
       warning.textContent = `Well done`;
       warning.style.color = `#283618`;
     }
-  })
-}
+  });
+};
 
 recipeApp.innit = () => {
-  recipeApp.optionSelected()
+  recipeApp.optionSelected();
 };
 
 recipeApp.innit();
