@@ -1,0 +1,86 @@
+@media (max-width: 1270px) {
+  .headerTitleContainer {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 100px;
+    transition: 0.4s;
+  }
+}
+
+@media (max-width: 860px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    width: 90%;
+  }
+
+  header {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url(../assets/AdobeStock_199274981.jpeg) right/ cover no-repeat;
+  }
+
+  .headerTitleContainer {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 10px;
+  }
+
+  .userInteraction {
+    padding: 20px;
+
+    form {
+      label {
+        margin: 10px;
+      }
+    }
+  }
+
+  .recipeContainer {
+    flex-direction: column;
+
+    .textContainer,
+    .imgContainer {
+      width: 90%;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    height: 40vh;
+  }
+
+  .headerTitleContainer {
+    height: 40vh;
+  }
+  .userInteraction {
+    form {
+      button {
+        margin-top: 15px;
+      }
+    }
+  }
+}
