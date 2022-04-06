@@ -28,18 +28,17 @@ recipeApp.displayData = (jsonResData) => {
   jsonResData.searchResults[0].results.forEach((mancare) => {
     const newListItem = document.createElement("li");
 
-    const shortParagraph = `${mancare.content}`.substring(0, 209);
+    const shortParagraph = `${mancare.content}`.substring(0, 200);
 
     newListItem.innerHTML = `
           <div class="recipeContainer">
             <div class="imgContainer">
-              <img src=${mancare.image} alt=${mancare.name}>
+              <img src=${mancare.image} alt="This is a plate phot of ${mancare.name} recipe">
             </div>
             <div class="textContainer">
               <h2>${mancare.name}</h2>
-              <p>${shortParagraph}... 
-                  <a href="${mancare.link}" target="blank" rel="noopener">Read more</a>
-              </p>
+              <p>${shortParagraph}... </p>
+              <a href="${mancare.link}" target="blank" rel="noopener">Read more</a>
             </div>
           </div>
             `;

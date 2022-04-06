@@ -296,7 +296,8 @@ img {
 
 a {
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  font-weight: bold;
 }
 
 body {
