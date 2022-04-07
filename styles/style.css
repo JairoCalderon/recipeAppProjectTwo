@@ -345,8 +345,8 @@ header {
           align-items: center;
 }
 
-main {
-  height: 50vh;
+body {
+  min-height: 100vh;
   position: relative;
 }
 
@@ -385,6 +385,10 @@ main {
           transform: scale(1.2);
 }
 
+.results {
+  padding-bottom: 20px;
+}
+
 .recipeContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,7 +419,7 @@ main {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
