@@ -3,21 +3,31 @@ const recipeApp = {};
 recipeApp.apiKey = "9f0deac75fc6469b92e2902b6660fd37";
 recipeApp.url = "https://api.spoonacular.com/food/search";
 
-recipeApp.getCusine = (stuff) => {
+recipeApp.getCusine = (cousine) => {
   const url = new URL(recipeApp.url);
   url.search = new URLSearchParams({
     apiKey: recipeApp.apiKey,
     number: 40,
-    query: stuff,
+    query: cousine,
   });
 
   fetch(url)
     .then((res) => {
-      return res.json();
+      if (res.ok) {
+        return res.json()
+      } else {
+        throw new Error(res.statusText)
+      }
     })
     .then((jsonRes) => {
-      console.log(jsonRes);
       recipeApp.displayData(jsonRes);
+    })
+    .catch((err) => {
+      if (err.message === "404") {
+        warning.textContent = `An error has occurred, please try later`
+      } else {
+        warning.textContent = `we did not find any data`
+      }
     });
 };
 

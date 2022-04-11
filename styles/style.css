@@ -296,8 +296,11 @@ img {
 
 a {
   text-decoration: none;
-  display: block;
+  display: inline-block;
   font-weight: bold;
+}
+a:hover, a:focus {
+  color: #d84823;
 }
 
 body {
