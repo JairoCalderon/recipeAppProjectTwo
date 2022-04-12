@@ -25,6 +25,17 @@ img {
 
 a {
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    font-weight: bold;
+    // padding: 10px;
+
+    &:hover,
+    &:focus {
+        color: #d84823;
+        // background-color: #dda15e;
+    }
+}
+
+.bottom {
     font-weight: bold;
 }

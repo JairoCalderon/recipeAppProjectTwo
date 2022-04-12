@@ -296,7 +296,14 @@ img {
 
 a {
   text-decoration: none;
-  display: block;
+  display: inline-block;
+  font-weight: bold;
+}
+a:hover, a:focus {
+  color: #d84823;
+}
+
+.bottom {
   font-weight: bold;
 }
 
@@ -423,6 +430,9 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
+}
+footer a {
+  color: black;
 }
 
 @media (max-width: 1270px) {
