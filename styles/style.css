@@ -303,6 +303,13 @@ a:hover, a:focus {
   color: #d84823;
 }
 
+.bottom {
+  font-weight: bold;
+}
+a:hover, a:focus {
+  color: #d84823;
+}
+
 body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
@@ -426,6 +433,9 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
+}
+footer a {
+  color: black;
 }
 
 @media (max-width: 1270px) {
