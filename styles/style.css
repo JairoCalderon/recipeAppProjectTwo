@@ -306,6 +306,9 @@ a:hover, a:focus {
 .bottom {
   font-weight: bold;
 }
+a:hover, a:focus {
+  color: #d84823;
+}
 
 body {
   font-size: 1rem;
